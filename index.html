@@ -5,13 +5,45 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stress Test</title>
 </head>
 <body>
   <div class="container">
     <div class="group-std">
-
-      
+      <div class="jumbotron text-center">
+        <h2>Stress Test Survey</h2>
+      </div>
+      <form id="stress-test">
+        <div class="form-group">
+          <p>In the past year, I have experienced the following:</p>
+          <input type="checkbox" name="warning" value="energy">Low energy.<br>
+          <input type="checkbox" name="warning" value="headache">Headaches.<br>
+          <input type="checkbox" name="warning" value="tension">Muscle tension in neck, face or shoulders.<br>
+          <input type="checkbox" name="warning" value="appetite">Increase in or loss of appetite.<br>
+          <input type="checkbox" name="warning" value="sweaty">Cold and sweaty palms.<br>
+        </div>
+        <div class="form-group">
+          <p>In the past year, I have noticed the following:</p>
+          <input type="checkbox" name="symptoms" value="insomnia">Insomnia.<br>
+          <input type="checkbox" name="symptoms" value="heart">Chest pain and rapid heartbeat.<br>
+          <input type="checkbox" name="symptoms" value="colds">Frequent colds and infections.<br>
+          <input type="checkbox" name="symptoms" value="pain">Aches, pains, and tense muscles.<br>
+          <input type="checkbox" name="symptoms" value="shaking">Trembling or shaking.<br>
+        </div>
+        <div class="form-group">
+          <p>In the past year, I have noticed the following:</p>
+          <input type="checkbox" name="cope" value="additude">Maintain a positve additude.<br>
+          <input type="checkbox" name="cope" value="accept">Accept that there are events that you cannot control.<br>
+          <input type="checkbox" name="cope" value="limits">Set limits appropriately and say no to requests that would create excessive stress in your life.<br>
+          <input type="checkbox" name="cope" value="exercise">Exercise regularly. <br>
+          <input type="checkbox" name="cope" value="meditate">Learn and practice relaxation techniques; try meditation, yoga, or tai-chi.<br>
+        </div>
+        <button type="submit"> Submit Survey</button>
+      </form>
+      <span id="solution">
+      </span>
     </div>
   </div>
 </body>
