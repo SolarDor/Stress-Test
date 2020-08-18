@@ -9,33 +9,33 @@ let warningResponses = [];
 let symptomsResponses = [];
 let copeResponses = [];
 
-    
-    
       $("input:checkbox[name=warning]:checked").each(function(){
         const warning = $(this).val();
-      // $('#warning').append(warning + "<br>");
         warningResponses.push(warning);
     });
     
     $("input:checkbox[name=symptoms]:checked").each(function(){
         const symptoms = $(this).val();
-    // $('#cope').append(symptoms + "<br>");
         symptomsResponses.push(symptoms);
     });
     $("input:checkbox[name=cope]:checked").each(function(){
         const cope = $(this).val();
-    // $('#cope').append(cope + "<br>");
-        copeResponses.push(symptoms);
+        copeResponses.push(cope);
     });
 
+    console.log(warningResponses);
+    console.log(symptomsResponses);
+    console.log(copeResponses);
+
+    // Conditional Statement
     if (warningResponses.length >= 3 && symptomsResponses.length >= 3 && copeResponses.length <=1){
-      $("#solution").append("High Stress! Check out these coping strategies!")
-    } else if (warningResponses.length >= 3 && symptomsResponses.length >= 3 && copeResponses.length <=3){
-      $("#solution").append("High Stress but you manage it well! Try adding these techniques as well!")
-    } else if (warningResponses.length >= 1 && symptomsResponses.length >= 1){
-      $("#solution").append("Wow! Very low stress. You do not need help coping.")
+      $("#solution").append("High Stress! You should add more coping strategies!")
+    } else if (warningResponses.length >= 3 && symptomsResponses.length >= 3 && copeResponses.length >=3){
+      $("#solution").append("Stress level is high but you manage it well! Consider adding a few more techniques.")
+    } else if (warningResponses.length <= 1 && symptomsResponses.length <= 1){
+      $("#solution").append("Wow! Very low stress. You seem to have a handle on your coping strategies.")
     } else {
-      $("#solution").append("Your results are mixed. Check out these coping skills and add what works for you.")
+      $("#solution").append("Your results are mixed. Consider adding a few more coping skills to your repertoire.")
     };
 
     $("#solution").show();
